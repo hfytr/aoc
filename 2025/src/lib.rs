@@ -1,9 +1,10 @@
 use std::time::Instant;
 
-const DAYS: [fn(String) -> (usize, usize); 2] = [day01::solve, day02::solve];
+const DAYS: &[fn(String) -> (usize, usize)] = &[day01::solve, day02::solve, day03::solve];
 
 mod day01;
 mod day02;
+mod day03;
 
 pub fn solve_day(day: usize) {
     let input = std::fs::read_to_string(&format!("inputs/{:02}", day)).unwrap();
