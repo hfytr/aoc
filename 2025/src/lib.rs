@@ -1,7 +1,16 @@
+#![feature(binary_heap_into_iter_sorted)]
 use std::time::Instant;
 
-const DAYS: &[fn(String) -> (usize, usize)] =
-    &[day01::solve, day02::solve, day03::solve, day04::solve, day05::solve, day06::solve, day07::solve];
+const DAYS: &[fn(String) -> (usize, usize)] = &[
+    day01::solve,
+    day02::solve,
+    day03::solve,
+    day04::solve,
+    day05::solve,
+    day06::solve,
+    day07::solve,
+    day08::solve,
+];
 
 mod day01;
 mod day02;
@@ -10,6 +19,7 @@ mod day04;
 mod day05;
 mod day06;
 mod day07;
+mod day08;
 
 pub fn solve_day(day: usize) {
     let input = std::fs::read_to_string(&format!("inputs/{:02}", day)).unwrap();
